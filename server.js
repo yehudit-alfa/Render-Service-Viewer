@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 const RENDER_API_KEY = process.env.RENDER_API_KEY; 
 
 // 1. הגדרת ה-Endpoint שאליו המשתמש יפנה
-app.get('/api/services', async (req, res) => {
+app.get('/', async (req, res) => {
     if (!RENDER_API_KEY) {
         return res.status(500).json({ error: "API Key not configured" });
     }
